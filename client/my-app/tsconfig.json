@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    /* --- Environment Settings --- */
+    "module": "ESNext",             // Changed from nodenext to ESNext for better bundler support
+    "moduleResolution": "bundler",  // Required for React + Vite/CRA to find modules
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // CRITICAL: Added DOM for React/Browser support
+    "types": [],
+
+    /* --- Other Outputs --- */
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noEmit": true,                 // Usually handled by your bundler (Vite/Webpack)
+
+    /* --- Stricter Typechecking Options --- */
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    /* --- Recommended Options --- */
+    "strict": true,
+    "jsx": "react-jsx",             // Keeps your "react-jsx" setting
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "allowJs": true,                // Useful if you are transitioning from JS to TS
+    "esModuleInterop": true         // Better compatibility with older JS packages
+  },
+  "include": ["src"]                // Only check files in your source folder
+}
